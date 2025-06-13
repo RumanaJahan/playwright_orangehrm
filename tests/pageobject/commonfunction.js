@@ -26,7 +26,7 @@ import { expect, devices, chromium } from '@playwright/test';
    console.log('Current url is:', mobileurl);
    await mobile.setViewportSize({ width: 450, height: 1070});
    return mobile;
-}
+ }
 
 // Get the username label
 
