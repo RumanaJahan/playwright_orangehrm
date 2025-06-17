@@ -25,5 +25,5 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run only Playwright test
-        run: npx playwright test tests/orangehrm/logout/testcase5_desktop_verify_that_user_can_logout_from_orangehrm.test.js
+      - name: Run Playwright tests
+        run: npx playwright test
