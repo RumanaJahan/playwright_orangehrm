@@ -108,6 +108,6 @@ export async function loginDesktop(page,desktopusername,desktoppassword )
 
  export async function logoutDesktop(page)
  {
-   await page.getByRole('listitem').filter({ hasText: 'Mike Quinn' }).locator('i').click();
+   await page.getByAltText('profile picture').click();
    await page.getByRole('menuitem', { name: 'Logout' }).click();
  }

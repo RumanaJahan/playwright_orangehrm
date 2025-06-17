@@ -16,5 +16,12 @@ test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange H
 
   //Login to Sauce Demo Website
   await commonfunction.loginDesktop(page,desktopusername,desktoppassword);
-    
+
+  //Logout of the website
+  await commonfunction.logoutDesktop(page);
+
+  //Check Login Screen Is Displayed
+  const loginlabellocator = page.getByRole('heading', { name: 'Login' });
+  const loginlabel = await loginlabellocator.textContent();
+  console.log("usernamelabel is = " + loginlabel);   
 });
