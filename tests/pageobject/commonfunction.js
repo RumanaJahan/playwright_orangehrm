@@ -105,3 +105,9 @@ export async function loginDesktop(page,desktopusername,desktoppassword )
    await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible();
   
  }
+
+ export async function logoutDesktop(page)
+ {
+   await page.getByRole('listitem').filter({ hasText: 'Mike Quinn' }).locator('i').click();
+   await page.getByRole('menuitem', { name: 'Logout' }).click();
+ }
