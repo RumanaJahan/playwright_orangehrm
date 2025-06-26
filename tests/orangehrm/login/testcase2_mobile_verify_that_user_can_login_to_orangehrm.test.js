@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 import * as commonfunction from '../../pageobject/commonfunction.js';
 
-test('Testcase01 - Mobile - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
+test('Testcase02 - Mobile - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
   {
   //Launch the Sauce Demo Website
-  const mobile = await commonfunction.launchmobileoragnehrm();
+  const mobile = await commonfunction.launchmobileorangehrm();
 
   //Get username label
   await commonfunction.getusernamelabel(mobile);

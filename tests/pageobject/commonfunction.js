@@ -6,7 +6,7 @@ import { expect, devices, chromium } from '@playwright/test';
  //LAUNCH SPECIFIC PAGES
  //--------------------------------------------------------------------------------------------------------------------------
 
- export async function launchdesktoporagnehrm(page) 
+ export async function launchdesktoporangehrm(page) 
  {
    const nav = await page.goto('/');
    const desktopurl = page.url();
@@ -15,7 +15,7 @@ import { expect, devices, chromium } from '@playwright/test';
    await page.setViewportSize({ width: 1920, height: 1080 });
  }
 
- export async function launchmobileoragnehrm() 
+ export async function launchmobileorangehrm() 
  {
    const browser = await chromium.launch();
    const context = await browser.newContext({ ...devices['iPhone X'] });
@@ -107,6 +107,12 @@ export async function loginDesktop(page,desktopusername,desktoppassword )
  }
 
  export async function logoutDesktop(page)
+ {
+   await page.getByAltText('profile picture').click();
+   await page.getByRole('menuitem', { name: 'Logout' }).click();
+ }
+
+ export async function logoutMobile(page)
  {
    await page.getByAltText('profile picture').click();
    await page.getByRole('menuitem', { name: 'Logout' }).click();

@@ -4,7 +4,7 @@ import * as commonfunction from '../../pageobject/commonfunction.js';
 test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
   {
   //Launch the Sauce Demo Website
-  await commonfunction.launchdesktoporagnehrm(page);
+  await commonfunction.launchdesktoporangehrm(page);
   
   //Get username label
   await commonfunction.getusernamelabel(page);
