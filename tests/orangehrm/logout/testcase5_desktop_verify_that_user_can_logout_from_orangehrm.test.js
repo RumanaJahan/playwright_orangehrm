@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import * as commonfunction from '../../pageobject/commonfunction.js';
 
-test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
+test('Testcase05 - Desktop - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
   {
   //Launch the Sauce Demo Website
   await commonfunction.launchdesktoporagnehrm(page);
@@ -21,7 +21,7 @@ test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange H
   await commonfunction.logoutDesktop(page);
 
   //Check Login Screen Is Displayed
-  const loginlabellocator = page.getByRole('heading', { name: 'Login' });
-  const loginlabel = await loginlabellocator.textContent();
-  console.log("usernamelabel is = " + loginlabel);   
+  const logindesktoplabellocator = page.getByRole('heading', { name: 'Login' });
+  const logindesktoplabel = await logindesktoplabellocator.textContent();
+  console.log("Heading in Login Screen is = " + logindesktoplabel);   
 });
