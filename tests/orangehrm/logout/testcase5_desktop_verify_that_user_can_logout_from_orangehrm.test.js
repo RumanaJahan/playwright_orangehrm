@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import * as commonfunction from '../../pageobject/commonfunction.js';
 
-test('Testcase05 - Desktop - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
+test('Testcase05 - Desktop - Verify That User Can Logout Successfully From Orange Hrm', async ({ page, context }) => 
   {
-  //Launch the Sauce Demo Website
+  //Launch the Orange Hrm Website
   await commonfunction.launchdesktoporagnehrm(page);
   
   //Get desktop username for login
@@ -14,7 +14,7 @@ test('Testcase05 - Desktop - Verify That User Can Login Successfully To Orange H
   const desktoppassword = await commonfunction.getpassword();
   console.log("desktoppassword is = " + desktoppassword);
 
-  //Login to Sauce Demo Website
+  //Login to Orange Hrm Website
   await commonfunction.loginDesktop(page,desktopusername,desktoppassword);
 
   //Logout of the website

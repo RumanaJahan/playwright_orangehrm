@@ -3,7 +3,7 @@ import * as commonfunction from '../../pageobject/commonfunction.js';
 
 test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange Hrm', async ({ page, context }) => 
   {
-  //Launch the Sauce Demo Website
+  //Launch the Orange Hrm Website
   await commonfunction.launchdesktoporagnehrm(page);
   
   //Get username label
@@ -20,7 +20,7 @@ test('Testcase01 - Desktop - Verify That User Can Login Successfully To Orange H
   const desktoppassword = await commonfunction.getpassword();
   console.log("desktoppassword is = " + desktoppassword);
 
-  //Login to Sauce Demo Website
+  //Login to Orange Hrm Website
   await commonfunction.loginDesktop(page,desktopusername,desktoppassword);
     
 });

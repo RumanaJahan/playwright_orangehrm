@@ -111,3 +111,10 @@ export async function loginDesktop(page,desktopusername,desktoppassword )
    await page.getByAltText('profile picture').click();
    await page.getByRole('menuitem', { name: 'Logout' }).click();
  }
+
+ export async function logoutMobile(page)
+ {
+   await page.getByAltText('profile picture').click();
+   await page.getByRole('menuitem', { name: 'Logout' }).click();
+ }
+   
