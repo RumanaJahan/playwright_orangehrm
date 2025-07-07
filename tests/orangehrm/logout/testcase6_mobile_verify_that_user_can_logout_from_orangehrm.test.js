@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 import * as commonfunction from '../../pageobject/commonfunction.js';
 
 test('Testcase06 - Mobile - Verify That User Can Logout Successfully From Orange Hrm', async ({ page, context }) => 
-  {
- 
+  { 
   //Launch the Orange Hrm Website
   const mobile = await commonfunction.launchmobileoragnehrm();
   
